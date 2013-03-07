@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
+		<script src="jquery.oasis-slots.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$('#number').Slots(32, { duration: 1000, delay: 200 });
+			});
+		</script>
+
+		<style>
+			#slot { position: relative; height: 120px; overflow: hidden; }
+			#number { text-align: center; font-size: 120px; position: absolute; font-family: Helvetica; font-weight: bold;min-width:120px;}
+			#number.blur {
+				filter: blur(1px);
+				-webkit-filter: blur(3px);
+				-moz-filter: blur(1px);
+				-o-filter: blur(1px);
+				-ms-filter: blur(1px);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="slot">
+			<div id="number">32</div>
+		</div>
+	</body>
+</html>
