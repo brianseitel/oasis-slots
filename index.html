@@ -10,9 +10,9 @@
 				var number1 = Math.floor(Math.random()*100);
 				var number2 = Math.floor(Math.random()*100);
 				var number3 = Math.floor(Math.random()*100);
-				$('#number1').Slots(number1, { duration: 1000, delay: 100 });
-				$('#number2').Slots(number2, { duration: 1000, delay: 100 });
-				$('#number3').Slots(number3, { duration: 1000, delay: 100 });
+				$('#number1').Slots({ number: number1, duration: 1000, delay: 100 });
+				$('#number2').Slots({ number: number2, duration: 1000, delay: 100 });
+				$('#number3').Slots({ number: number3, duration: 1000, delay: 100 });
 			});
 		</script>
 
