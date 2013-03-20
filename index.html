@@ -10,15 +10,23 @@
 				var number1 = Math.floor(Math.random()*100);
 				var number2 = Math.floor(Math.random()*100);
 				var number3 = Math.floor(Math.random()*100);
-				$('#number1').Slots(number1, { duration: 1000, delay: 50 });
-				$('#number2').Slots(number2, { duration: 1000, delay: 50 });
-				$('#number3').Slots(number3, { duration: 1000, delay: 50 });
+				$('#number1').Slots(number1, { duration: 1000, delay: 100 });
+				$('#number2').Slots(number2, { duration: 1000, delay: 100 });
+				$('#number3').Slots(number3, { duration: 1000, delay: 100 });
 			});
 		</script>
 
 		<style>
-			#slot { position: relative; height: 120px; overflow: hidden; text-align: center; }
-			.number { text-align: center; font-size: 120px; position: absolute; font-family: Helvetica; font-weight: bold;min-width:120px;}
+			#slot { position: relative; height: 130px; overflow: hidden; text-align: center; }
+			.number { 
+				text-align: center;
+				font-size: 120px;
+				position: absolute;
+				font-family: Helvetica;
+				font-weight: bold;
+				min-width:120px;
+			}
+
 			#number1.blur {
 				filter: blur(1px);
 				-webkit-filter: blur(3px);
@@ -26,10 +34,21 @@
 				-o-filter: blur(1px);
 				-ms-filter: blur(1px);
 			}
+
+			.gradients {
+				background-image: url('images/top_gradient.png'), url('images/bottom_gradient.png');
+				background-position: top left, bottom left;
+				background-repeat: repeat-x, repeat-x;
+				position: absolute;
+				z-index: 100;
+				width: 100%;
+				height: 100%;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="slot">
+			<div class="gradients"></div>
 			<div id="number1" class="number"></div>
 			<div id="number2" class="number" style="left: 200px;"></div>
 			<div id="number3" class="number" style="left: 400px;"></div>
