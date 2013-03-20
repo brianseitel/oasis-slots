@@ -25,9 +25,10 @@
 					.animate({top: -$this.height()}, opts.delay)
 					.animate({top: $this.height()}, 0);
 			if (count >= total_values) {
+				var randDelay = Math.floor(Math.random() * 50);
 				$this.stop()
 					.html(number)
-					.animate({top: 0}, opts.duration / 2, 'swing');
+					.animate({top: 0}, (opts.duration / 2) + randDelay, 'swing');
 				clearTimeout(looper);
 			}
 			count++;

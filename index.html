@@ -7,14 +7,19 @@
 
 		<script>
 			$(document).ready(function() {
-				$('#number').Slots(32, { duration: 1000, delay: 200 });
+				var number1 = Math.floor(Math.random()*100);
+				var number2 = Math.floor(Math.random()*100);
+				var number3 = Math.floor(Math.random()*100);
+				$('#number1').Slots(number1, { duration: 1000, delay: 50 });
+				$('#number2').Slots(number2, { duration: 1000, delay: 50 });
+				$('#number3').Slots(number3, { duration: 1000, delay: 50 });
 			});
 		</script>
 
 		<style>
-			#slot { position: relative; height: 120px; overflow: hidden; }
-			#number { text-align: center; font-size: 120px; position: absolute; font-family: Helvetica; font-weight: bold;min-width:120px;}
-			#number.blur {
+			#slot { position: relative; height: 120px; overflow: hidden; text-align: center; }
+			.number { text-align: center; font-size: 120px; position: absolute; font-family: Helvetica; font-weight: bold;min-width:120px;}
+			#number1.blur {
 				filter: blur(1px);
 				-webkit-filter: blur(3px);
 				-moz-filter: blur(1px);
@@ -25,7 +30,9 @@
 	</head>
 	<body>
 		<div id="slot">
-			<div id="number">32</div>
+			<div id="number1" class="number"></div>
+			<div id="number2" class="number" style="left: 200px;"></div>
+			<div id="number3" class="number" style="left: 400px;"></div>
 		</div>
 	</body>
 </html>
